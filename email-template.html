@@ -1,0 +1,456 @@
+<html>
+<head>
+	<style>
+
+/*Load colors.*/
+
+:root {
+	--bg: white;
+}
+
+#outer_wrapper {
+	background-color: var(--bg);
+	padding: 0;
+	text-align: center;
+}
+
+#wrapper {
+	margin: 0 auto;
+	padding: 70px 0;
+	-webkit-text-size-adjust: none !important;
+	width: 100%;
+	max-width: 670px;
+}
+
+#template_container {
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+	background-color: var(--bg);
+	border: 1px solid white;
+	border-radius: 3px !important;
+}
+
+#template_header {
+	border-radius: 3px 3px 0 0 !important;
+	border-bottom: 0;
+	font-weight: bold;
+	line-height: 100%;
+	vertical-align: middle;
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+#template_header h1,
+#template_header h1 a {
+	background-color: inherit;
+}
+
+#template_header_image img {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#template_footer td {
+	padding: 0;
+	border-radius: 6px;
+}
+
+#template_footer #credit {
+	border: 0;
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 150%;
+	text-align: center;
+	padding: 24px 0;
+}
+
+#template_footer #credit p {
+	margin: 0 0 16px;
+}
+
+#body_content table td {
+	padding: 32px 48px 12px;
+}
+
+#body_content table td td {
+	padding-block: 12px;
+	padding-inline: 0px;
+}
+
+#body_content table td th {
+	padding: 12px;
+}
+
+#body_content td ul.wc-item-meta {
+	font-size: small;
+	margin: 1em 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+#body_content td ul.wc-item-meta li {
+	margin: 0.5em 0 0;
+	padding: 0;
+}
+
+#body_content td ul.wc-item-meta li p {
+	margin: 0;
+}
+
+#body_content p {
+	margin: 0 0 16px;
+}
+
+#body_content_inner {
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 150%;
+}
+
+.td {
+	border: 1px solid white;
+	vertical-align: top;
+}
+
+.address {
+	padding: 12px;
+	border: 1px solid white;
+}
+
+.text {
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+#header_wrapper {
+	padding: 36px 48px;
+	display: block;
+}
+
+h1 {
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 150%;
+	margin: 0;
+}
+
+h2 {
+	display: block;
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 130%;
+	margin: 0 0 18px;
+}
+
+h3 {
+	display: block;
+	font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 130%;
+	margin: 16px 0 8px;
+}
+
+a {
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+img {
+	border: none;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	outline: none;
+	text-decoration: none;
+	text-transform: capitalize;
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+/*Some custom style by cbz for email template*/
+
+#body_content_inner h2 {
+	color: black;
+	margin-bottom: 0;
+}
+
+#body_content_inner h2 {
+	font-size: 15px;
+}
+
+#body_content_inner .cbz_order_details {
+	border-top: 1px solid lightgrey;
+	padding-block: 30px;
+}
+
+#body_content_inner p, #body_content_inner h1, #body_content_inner h3, #body_content_inner p strong {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #1b1b1b;
+}
+
+#body_content_inner h2:nth-child(2) {
+	font-size: 15px;
+}
+
+#body_content_inner table thead th{
+	display: none;
+}
+
+#body_content .td td, #body_content .td th {
+	padding-inline: 0;
+}
+
+#template_footer #credit p {
+	font-size: 14px;
+}
+
+.td .tax_label {
+	display: none;
+}
+
+#body_content #body_content_inner tfoot tr:nth-child(1) th, #body_content #body_content_inner tfoot tr:nth-child(1) td {
+	border-top: 1px solid lightgrey;
+	border-top-width: 1px !important;
+}
+
+#body_content #body_content_inner tfoot tr:nth-last-child(1) th, #body_content #body_content_inner tfoot tr:nth-last-child(1) td {
+	border-top: 1px solid lightgrey;
+	border-top-width: 1px !important;
+}
+
+#body_content #body_content_inner tbody tr td:nth-last-child(1), #body_content #body_content_inner tfoot tr td:nth-last-child(1) {
+	text-align: right !important;
+}
+
+#body_content_inner .address {
+	padding-inline: 0;
+	font-size: 13px;
+}
+
+#body_content #body_content_inner tfoot tr th, #body_content #body_content_inner tfoot tr td {
+	font-size: 16px;
+	font-weight: 200;
+}
+
+#body_content #body_content_inner tfoot tr:nth-last-child(1) th, #body_content #body_content_inner tfoot tr:nth-last-child(1) td {
+	font-weight: bold;
+}
+
+#body_content_inner .cbz-title-size {
+	display: flex;
+}
+
+#body_content_inner .cbz-title-email .wc-item-meta li {
+	display: flex;
+}
+
+#body_content_inner .cbz-title-email .wc-item-meta-label {
+	text-transform: capitalize;
+}
+
+#body_content_inner .cbz-title-email {
+	padding-left: 10px;
+}
+
+#body_content_inner .cbz-title-email, #body_content_inner .cbz-title-email .wc-item-meta {
+	font-size: 16px;
+}
+
+#body_content_inner .td {
+	vertical-align: top !important;
+}
+
+#body_content_inner .td .amount {
+	font-size: 16px;
+}
+
+#body_content_inner p:nth-last-child(1) {
+	text-align: center;
+}
+
+/**
+ * Media queries are not supported by all email clients, however they do work on modern mobile
+ * Gmail clients and can help us achieve better consistency there.
+ */
+@media screen and (max-width: 600px) {
+	#header_wrapper {
+		padding: 27px 36px !important;
+		font-size: 24px;
+	}
+
+	#body_content table > tbody > tr > td {
+		padding: 10px !important;
+	}
+
+	#body_content_inner {
+		font-size: 10px !important;
+	}
+}
+</style>
+</head>
+<body>
+	<table width="100%" id="outer_wrapper">
+		<tbody><tr>
+			<td width="670">
+				<div id="wrapper" dir="ltr">
+					<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%">
+						<tbody><tr>
+							<td align="center" valign="top">
+								<div id="template_header_image">
+								</div>
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" id="template_container">
+									<tbody><tr>
+										<td align="center" valign="top">
+											<!-- Header -->
+											<table border="0" cellpadding="0" cellspacing="0" width="100%" id="template_header">
+												<tbody><tr>
+													<td id="header_wrapper">
+														<img src="https://almostgods.com/wp-content/uploads/2021/10/ag-logo_900x600-1.png" border="0">
+													</td>
+												</tr>
+											</tbody></table>
+											<!-- End Header -->
+										</td>
+									</tr>
+									<tr>
+										<td align="center" valign="top">
+											<!-- Body -->
+											<table border="0" cellpadding="0" cellspacing="0" width="100%" id="template_body">
+												<tbody><tr>
+													<td valign="top" id="body_content">
+														<!-- Content -->
+														<table border="0" cellpadding="20" cellspacing="0" width="100%">
+															<tbody><tr>
+																<td align="top">
+																	<div id="body_content_inner" align="left">
+																		<p style="color: #1b1b1b"><strong>THANK YOU FOR YOUR PURCHASE!</strong></p>
+																		<p>Hi Radhika,</p>
+
+																		<p>
+																			We are Getting Your Orde r Ready to be shipped. Here are the details of your purchase.
+																		</p>
+																		<div class="cbz_order_details">
+																			<h2>
+																				Order details
+																			</h2>
+																			<h2>
+																				Order number: 17645 <br> Purchase date: November 14, 2023
+																			</h2>
+																		</div>
+																		<div>
+																			<table class="td" cellspacing="0" cellpadding="6" border="1" width="100%">
+																				<thead>
+																					<tr>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr class="order_item">
+																						<td class="td cbz-title-size" align="left">
+																							<img width="150" height="218" src="https://demo.almostgods.com/wp-content/uploads/2023/04/ventruvian-black-front-scaled.jpg" class="attachment-150x300 size-150x300" alt="" loading="lazy" border="0"><div class="cbz-title-email"><span style="color: #1b1b1b">BLACK VENTRUVIAN JACQUARD TEE - XL x 1</span><br><ul class="wc-item-meta"><li>
+																								<strong class="wc-item-meta-label">size:</strong> <p>XL</p>
+																							</li></ul>
+																						</div>		</td>
+																						<td class="td">
+																							<!-- 			1 -->
+																						</td>
+																						<td class="td" align="right">
+																							<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>5,500</span> 		</td>
+																						</tr>
+
+																					</tbody>
+																					<tfoot style="color: #1b1b1b">
+																						<tr>
+																							<th class="td" scope="row" colspan="2" align="left">Subtotal:</th>
+																							<td class="td"align="right">
+																								<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>5,500</span> </td>
+																							</tr>
+																							<tr>
+																								<th class="td" scope="row" colspan="2" align="left">Discount:</th>
+																								<td class="td" align="right">
+																									<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>If Any</span> </td>
+																								</tr>
+																								<tr>
+																									<th class="td" scope="row" colspan="2" align="left">Shipping:</th>
+																									<td class="td" align="right">Free shipping</td>
+																								</tr>
+																								<tr>
+																									<th class="td" scope="row" colspan="2" align="left">Payment method:</th>
+																									<td class="td" align="right">Credit Card/Debit Card/NetBanking</td>
+																								</tr>
+																								<tr>
+																									<th class="td" scope="row" colspan="2" align="left">Total:</th>
+																									<td class="td" align="right"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₹</span>5,500</span></td>
+																								</tr>
+																							</tfoot>
+																						</table>
+																					</div>
+
+																					<table id="addresses" cellspacing="0" cellpadding="0" border="0" width="100%">
+																						<tbody><tr>
+																							<td valign="top" width="50%" align="left">
+																								<h2>Billing address</h2>
+
+																								<address class="address">
+																									Radhika Deshmukh<br>Diamond District, Domlur, Kodihalli, HAL, Old Airport Road<br>F Block, F-64<br>Bengaluru 560008<br>Karnataka, India									<br><a href="tel:9167831073">9167831073</a>													<br>rad.deshmukh@gmail.com							</address>
+																								</td>
+																								<td valign="top" width="50%">
+																									<h2>Shipping address</h2>
+
+																									<address class="address">
+																										Radhika Deshmukh<br>Diamond District, Domlur, Kodihalli, HAL, Old Airport Road<br>F Block, F-64<br>Bengaluru 560008<br>Karnataka, India									</address>
+																									</td>
+																								</tr>
+																							</tbody></table>
+																							<p align="center">Thanks for using almostgods.com!</p>
+																						</div>
+																					</td>
+																				</tr>
+																			</tbody></table>
+																			<!-- End Content -->
+																		</td>
+																	</tr>
+																</tbody></table>
+																<!-- End Body -->
+															</td>
+														</tr>
+													</tbody></table>
+												</td>
+											</tr>
+											<tr>
+												<td align="center" valign="top">
+													<!-- Footer -->
+													<table border="0" cellpadding="10" cellspacing="0" width="100%" id="template_footer">
+														<tbody><tr>
+															<td valign="top">
+																<table border="0" cellpadding="10" cellspacing="0" width="100%">
+																	<tbody><tr>
+																		<td colspan="2" valign="middle" id="credit" align="center">
+
+																			<p>
+																				If you have any questions about your order, please contact <a href="https://almostgods.com">ALMOST GODS</a> at <br><a href="https://almostgods.com/email-us" target="_blank">almostgods95@gmail.com</a>
+																			</p>
+																			<p>
+																				<strong>Mailing address</strong><br><a href="https://almostgods.com">almostgods.com</a>
+																			</p>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- End Footer -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
